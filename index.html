@@ -1,80 +1,60 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <title id="title">Howard Park Portfolio Website</title>
-<link rel="stylesheet" href="stylesheet_main.css">
-<script>
-  function resizeGrid(){
-    console.log("Resized");
-    if(document.body.clientWidth >= 1100){
-      gridcontainer.style.gridTemplateColumns = "auto auto";
-    }else{
-      gridcontainer.style.gridTemplateColumns = "auto";
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Performance Optimizations -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="preload" as="style" href="/src/index.css" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- Back-Forward Cache Optimization -->
+    <meta name="pageType" content="portfolio" />
+    <meta name="bfcache-opt-in" content="true" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Portfolio | Your Name - Full Stack Developer</title>
+    <meta name="title" content="Portfolio | Your Name - Full Stack Developer">
+    <meta name="description" content="Full Stack Developer specializing in modern web development. View my projects and skills in React, Node.js, and more." />
+    <meta name="keywords" content="full stack developer, web development, React, Node.js, portfolio">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/">
+    <meta property="og:title" content="Portfolio | Your Name - Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer specializing in modern web development. View my projects and skills in React, Node.js, and more.">
+    <meta property="og:image" content="/path-to-your-preview-image.jpg">
 
-    var allItems = document.getElementsByClassName("grid-item");
-    var height = allItems[0].clientWidth * (9 / 16);
-    console.log(height);
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-portfolio-url.com/">
+    <meta property="twitter:title" content="Portfolio | Your Name - Full Stack Developer">
+    <meta property="twitter:description" content="Full Stack Developer specializing in modern web development. View my projects and skills in React, Node.js, and more.">
+    <meta property="twitter:image" content="/path-to-your-preview-image.jpg">
 
-    for(var i = 0; i < allItems.length; i++){
-      allItems[i].style.height =  String(height + "px");
-    }
-  };
-
-  window.onload = resizeGrid;
-  window.onresize = resizeGrid;
-</script>
-</head>
-
-<body>
-  <div class="header">
-    <div class="name">
-      <a href="index.html" target="_self">
-        <h1>HOWARD PARK</h1>
-        <h3>GAME DEVELOPMENT PORTFOLIO</h3>
-      </a>
-    </div>
-    <div class="contact"><a href="mailto:howard.park@nyu.edu" target="_self">CONTACT</a></div>
-    <div class="resume"><a href="resume.pdf" target="_self">RESUME</a></div>
-    <div class="aboutme"><a href="aboutme.html" target="_self">ABOUT ME</a></div>
-  </div>
-
-  <div class="grid-container" id="gridcontainer">
-    <div class="grid-item">
-      <a href="ultraviolet.html" target="_self">
-        <img class="main" src="Ultraviolet/ultraviolet_thumbnail.png"></img>
-        <!--video src="ARWorld/ARWorldDemo.mp4" type="video/mp4" autoplay muted loop></video-->
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="ARWorld.html" target="_self">
-        <img class="main" src="ARWorld/ARWorldBanner.png"></img>
-        <!--video src="ARWorld/ARWorldDemo.mp4" type="video/mp4" autoplay muted loop></video-->
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="prophecyschosen.html" target="_self">
-        <img class="main" src="ProphecysChosen/ProphecysChosen.jpg"></img>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="grounded.html" target="_self">
-        <video class="main" src="grounded1.mp4" type="video/mp4" autoplay muted loop></video>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="hrmdvr.html" target="_self">
-        <img class="main" src="HRMDVR/HRMDVR.png"></img>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="tandononline.html" target="_self">
-        <img class="main" src="TandonOnline/TeamingBeams.png"></img>
-      </a>
-    </div>
-  </div>
-</body>
-
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#F6B17A">
+    
+    <!-- Accessibility -->
+    <link rel="canonical" href="https://your-portfolio-url.com/">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Font Loading Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap">
+    </noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
