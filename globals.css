@@ -13,116 +13,51 @@
 body{
   margin: 0;
   padding: 0;
-	background-color: var(--backgroundColor);
+  background-color: var(--backgroundColor);
 }
 
 /* Hide scroll wheel */
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;
+    background: transparent;
 }
 
-/* Header */
+/* ====== HEADER ====== */
 .header{
   background-color: var(--backgroundColor);
-
-  padding-top: 40px;
-  padding-right: 7vw;
-  margin-left: 7vw;
-  padding-bottom: 2vh;
-
-  font-size: 1.2vw;
-  font-family: HeaderFont;
-  color: black;
-
-  height: auto;
+  padding: 30px 7vw 20px 7vw;
+  margin: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
-/* Header > Tabs */
 .header a{
   text-decoration: none;
   color: var(--textColor);
-  font-size: 1.5vw;
 }
 
-/* Header > Name > Block */
+/* Header > Name */
 .name{
-  display: inline-block;
   text-align: left;
-  width: 30vw;
   padding-top: 10px;
+  margin-bottom: 4px;
 }
 
-/* Header > Name > Name Text */
 .name h1{
   letter-spacing: .45vw;
-
   font-family: HeaderFont;
   font-weight: normal;
-  font-size: 3vw;
-
+  font-size: clamp(28px, 4vw, 48px);
   color: var(--headerColor);
   margin: 0;
 }
 
-/* Header > Name > Name SubText */
 .name h3{
   letter-spacing: .4vw;
-  font-size: 1vw;
+  font-size: clamp(11px, 1.2vw, 16px);
+  font-family: SubheaderFont;
   color: white;
   margin: 0;
-}
-
-/* Header > Tabs > Resume */
-.resume{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-/* Header > Tabs > Contacts */
-.contact{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-right: 1.5vw;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-/* Header > Tabs > About Me */
-.aboutme{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .2s ease;
-}
-
-.text {
-  color: var(--textColor);
-  font-size: 18px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }

@@ -1,84 +1,228 @@
 @import "globals.css";
 
-.navbar {
-  background-color: var(--backgroundColor);
-  top: 0;
-  left: 0;
-  margin-bottom: 0;
-  text-align: center;
+/* ====== PORTFOLIO CONTAINER ====== */
+.portfolio {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 7vw 60px;
 }
 
-.navbar a {
-  display: inline-block;
-  color: var(--textColor);
-  padding: 14px 16px;
-  font-size: 25px;
+/* ====== PROJECT SECTIONS ====== */
+.project {
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .2s ease;
+.project:last-child {
+  border-bottom: none;
 }
 
-.text {
-  color: var(--textColor);
-  font-size: 18px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-.text h1{
-  color: var(--textColor);
-  font-size: 20px;
-  margin: 2;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: var(--backgroundColor);
-  padding-left: 7vw;
-  padding-right: 7vw;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  grid-gap: 10px;
-}
-
-.grid-item {
-  text-align: center;
-  background-color: black;
-}
-
-img{
-  width: 100%;
-  height: 100%;
-}
-
-video{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* Body > Header */
-h1{
+.project-title {
   font-family: HeaderFont;
-  font-size: 50px;
+  font-size: 32px;
+  color: var(--headerColor);
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
 }
 
-/* Body > Subheader  */
-h3{
+.project-meta {
+  font-family: BodyFont;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.project-meta .engine {
+  color: #6fcf6f;
+}
+
+.project-meta .roles {
+  color: #e07070;
+}
+
+.project-meta span::after {
+  content: "  ·  ";
+  color: #555;
+}
+
+.project-meta span:last-child::after {
+  content: "";
+}
+
+.project-summary {
+  font-family: BodyFont;
+  font-size: 16px;
+  color: var(--textColor);
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  min-height: 1.6em; /* placeholder space even if empty */
+}
+
+/* ====== MEDIA ====== */
+.media-row {
+  margin-bottom: 16px;
+}
+
+.media-row video,
+.media-row img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  background-color: #111;
+}
+
+.media-row iframe {
+  width: 100%;
+  max-height: 60vh;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Side-by-side images/videos */
+.media-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ====== ABOUT/CONTACT SECTION ====== */
+.about-contact {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bio-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.profile-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bio {
+  font-family: BodyFont;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icon-link {
+  color: var(--textColor);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.icon-link:hover {
+  color: var(--headerColor);
+  transform: translateY(-2px);
+}
+
+.icon-link svg {
+  width: 28px;
+  height: 28px;
+}
+
+.resume-link span {
   font-family: SubheaderFont;
-  font-size: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ====== RESPONSIVE: MOBILE ====== */
+@media screen and (max-width: 768px) {
+  .header {
+    padding-top: 20px;
+    padding-right: 5vw;
+    margin-left: 5vw;
+  }
+
+  .name h1 {
+    font-size: 7vw;
+  }
+
+  .name h3 {
+    font-size: 2.8vw;
+  }
+
+  .portfolio {
+    padding: 0 5vw 40px;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .project-meta {
+    font-size: 12px;
+  }
+
+  .project-meta span {
+    display: block;
+  }
+
+  .project-meta span::after {
+    content: "";
+  }
+
+  .project-summary {
+    font-size: 14px;
+  }
+
+  .media-duo {
+    grid-template-columns: 1fr;
+  }
+
+  .media-row video,
+  .media-row iframe {
+    max-height: 50vh;
+    object-fit: contain;
+  }
+
+  .contact-icons {
+    gap: 16px;
+  }
+
+  .icon-link svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .name h1 {
+    font-size: 8vw;
+  }
+
+  .name h3 {
+    font-size: 3.2vw;
+  }
+
+  .bio {
+    font-size: 13px;
+  }
 }
