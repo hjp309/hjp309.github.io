@@ -57,7 +57,8 @@
   color: var(--textColor);
   line-height: 1.6;
   margin: 0 0 20px 0;
-  min-height: 1.6em; /* placeholder space even if empty */
+  min-height: 1.6em;
+  /* placeholder space even if empty */
 }
 
 /* ====== MEDIA ====== */
@@ -119,6 +120,46 @@
   color: #ccc;
   line-height: 1.6;
   margin: 0;
+}
+
+/* Education */
+.education {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 16px 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--headerColor);
+  background: rgba(79, 170, 255, 0.06);
+  border-radius: 0 6px 6px 0;
+}
+
+.education svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--headerColor);
+  opacity: 0.85;
+}
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.education-school {
+  font-family: SubheaderFont;
+  font-size: 13px;
+  color: var(--headerColor);
+  letter-spacing: 0.5px;
+}
+
+.education-degree {
+  font-family: BodyFont;
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.3px;
 }
 
 .contact-icons {
