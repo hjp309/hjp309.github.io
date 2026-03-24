@@ -79,36 +79,51 @@
     </div>
   </div>
 
+  <!-- ====== PAGE NAV ====== -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-link active">Professional</a>
+    <a href="personal-projects.html" class="nav-link">Personal Projects</a>
+  </nav>
+
   <!-- ====== PORTFOLIO SECTIONS ====== -->
   <div class="portfolio">
-
-    <!-- ── COMBAT LOCOMOTION PROTOTYPE ── -->
-    <section class="project" id="combat-locomotion-prototype">
-      <h2 class="project-title">Tower Arena Prototype WIP</h2>
+    <!-- ── META — HORIZON WORLDS PORTALS ── -->
+    <section class="project" id="meta-horizon-worlds">
+      <h2 class="project-title">Meta — Horizon Worlds</h2>
       <p class="project-summary">
-        A 3rd person shooter locomotion and abilities prototype for a competitive, looter shooter game that I am
-        currently working on.
+        Built VFX, animations, and parallax shaders for portals in Meta's Horizon Worlds.
       </p>
-      <div class="media-row">
-        <video src="Combat Locomotion Prototype WIP/Locomotion and Combat Slice.mp4" controls muted loop
-          preload="metadata"></video>
-      </div>
-      <div class="media-row media-duo">
-        <video src="Combat Locomotion Prototype WIP/Tentacle Ultimate.mp4" controls muted loop
-          preload="metadata"></video>
-        <video src="Combat Locomotion Prototype WIP/Early Tests.mp4" controls muted loop preload="metadata"></video>
+      <div class="carousel" id="carousel-meta">
+        <div class="carousel-track">
+          <div class="carousel-slide"><video src="Meta/Portal Recording 2.mp4" controls muted loop preload="metadata"></video></div>
+          <div class="carousel-slide"><video src="Meta/Portal Recording.mp4" controls muted loop preload="metadata"></video></div>
+          <div class="carousel-slide"><img src="Meta/Horizon Worlds Portal.webp" alt="Horizon Worlds Portal VFX"></div>
+          <div class="carousel-slide"><img src="Meta/Portal2.jpg" alt="Horizon Worlds Portal 2"></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
-    <!-- ── LOL DRAFT SIMULATOR ── -->
-    <section class="project" id="loldraftsimulator">
-      <h2 class="project-title">LoL Draft Simulator</h2>
+    <!-- ── FIVEMICS ── -->
+    <section class="project" id="fivemics">
+      <h2 class="project-title">FiveMics</h2>
       <p class="project-summary">
-        Draft phase for a League of Legends Fantasy Esports proof of concept using real tournament and player stats on
-        Supabase.
+        Engineered the backend networking for user registration and authentication, supporting Desktop, Google, and Apple sign-in flows via AWS.
       </p>
-      <div class="media-row">
-        <video src="LoLDraftSimulator/LoLDraftSimulator.mp4" controls muted loop preload="metadata"></video>
+      <div class="carousel" id="carousel-fivemics">
+        <div class="carousel-track">
+          <div class="carousel-slide carousel-slide--quad">
+            <img src="FiveMics/1.jpg" alt="FiveMics screenshot 1">
+            <img src="FiveMics/2.jpg" alt="FiveMics screenshot 2">
+            <img src="FiveMics/3.jpg" alt="FiveMics screenshot 3">
+            <img src="FiveMics/4.jpg" alt="FiveMics screenshot 4">
+          </div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
@@ -118,9 +133,14 @@
       <p class="project-summary">
         <!-- Add a summary for Ultraviolet here -->
       </p>
-      <div class="media-row media-duo">
-        <video src="Ultraviolet/Octi Demo.mp4" controls muted loop preload="metadata"></video>
-        <video src="Ultraviolet/RPReplay_Final1653077002.mp4" controls muted loop preload="metadata"></video>
+      <div class="carousel" id="carousel-ultraviolet">
+        <div class="carousel-track">
+          <div class="carousel-slide"><video src="Ultraviolet/Octi Demo.mp4" controls muted loop preload="metadata"></video></div>
+          <div class="carousel-slide"><video src="Ultraviolet/RPReplay_Final1653077002.mp4" controls muted loop preload="metadata"></video></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
@@ -130,81 +150,20 @@
       <p class="project-summary">
         An Augmented Reality app developed at Evara VR, showcasing a variety of AR interactions on iOS.
       </p>
-      <div class="media-row">
-        <video src="ARWorld/ARWorldDemo.mp4" controls muted loop preload="metadata"></video>
+      <div class="carousel" id="carousel-arworld">
+        <div class="carousel-track">
+          <div class="carousel-slide"><video src="ARWorld/ARWorldDemo.mp4" controls muted loop preload="metadata"></video></div>
+          <div class="carousel-slide"><iframe src="https://www.youtube.com/embed/hNHSdoVNObk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
-
-    <!-- ── PROPHECY'S CHOSEN ── -->
-    <section class="project" id="prophecyschosen">
-      <h2 class="project-title">Prophecy's Chosen</h2>
-      <p class="project-summary">
-        A 2D dungeon crawler where players alternate between 3 Guardians, developing synergies to fight monsters and
-        solve puzzles.
-      </p>
-      <div class="media-row">
-        <img src="ProphecysChosen/ProphecysChosen.jpg" alt="Prophecy's Chosen banner">
-      </div>
-      <!-- YouTube embeds kept since no local video files exist -->
-      <div class="media-row">
-        <iframe src="https://www.youtube.com/embed/xtRnFIlgFVc?loop=1" frameborder="0" allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <!-- ── GROUNDED ── -->
-    <section class="project" id="grounded">
-      <h2 class="project-title">Grounded</h2>
-      <p class="project-summary">
-        A cryptic VR puzzle game where an amnesiac scientist pieces together lost memories by following phonograph
-        recordings through a rural 1950s home.
-      </p>
-      <div class="media-row">
-        <video src="grounded1.mp4" controls muted loop preload="metadata"></video>
-      </div>
-      <div class="media-row media-duo">
-        <img src="Grounded/Grounded.bmp" alt="Grounded menu scene">
-        <img src="Grounded/Bedroom.png" alt="Grounded bedroom scene">
-      </div>
-    </section>
-
-    <!-- ── HRMD VR ── -->
-    <section class="project" id="hrmdvr">
-      <h2 class="project-title">HRMD VR</h2>
-      <p class="project-summary">
-        A VR puzzle game where players traverse rooms, using an alchemy mechanic to fuse objects and discover clues to
-        escape a containment facility.
-      </p>
-      <div class="media-row media-duo">
-        <img src="HRMDVR/1.png" alt="HRMD VR Puzzle 1">
-        <img src="HRMDVR/2.png" alt="HRMD VR Puzzle 2">
-      </div>
-      <div class="media-row media-duo">
-        <img src="HRMDVR/3.png" alt="HRMD VR Puzzle 3">
-        <img src="HRMDVR/4.png" alt="HRMD VR Puzzle 4">
-      </div>
-    </section>
-
-    <!-- ── TANDON ONLINE ── -->
-    <section class="project" id="tandononline">
-      <h2 class="project-title">Tandon Online — Teaming Beams</h2>
-      <p class="project-summary">
-        An online 3D block-stacking game built for NYU Tandon Online, where teams of four earn points by cooperatively
-        building towers using networked multiplayer.
-      </p>
-      <div class="media-row">
-        <video src="TandonOnline/CraneGameDemo.mp4" controls muted loop preload="metadata"></video>
-      </div>
-      <div class="media-row media-duo">
-        <video src="TandonOnline/CraneGameInitialPrototype.mp4" controls muted loop preload="metadata"></video>
-        <video src="TandonOnline/CraneGamePrototype2.mp4" controls muted loop preload="metadata"></video>
-      </div>
-    </section>
-
-
 
   </div><!-- /portfolio -->
 
+  <script src="js/carousel.js"></script>
 </body>
 
 </html>

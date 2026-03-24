@@ -1,7 +1,12 @@
-@font-face { font-family: BodyLightFont; src: url('Fonts/BPmonoStencil.ttf')}
-@font-face { font-family: SubheaderFont; src: url('Fonts/BPmonoBold.ttf')}
-@font-face { font-family: BodyFont; src: url('Fonts/BPmono.ttf')}
-@font-face { font-family: HeaderFont; src: url('Fonts/OpenSans-Bold.ttf')}
+/* ====== GOOGLE FONTS ====== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Font aliases — map old names to new typefaces */
+@font-face { font-family: HeaderFont;    src: local('Outfit Bold'),    local('Outfit-Bold');    font-weight: 700; }
+@font-face { font-family: SubheaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'); font-weight: 600; }
+@font-face { font-family: SubHeaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'); font-weight: 600; }
+@font-face { font-family: BodyFont;      src: local('Inter Regular'),  local('Inter-Regular');  font-weight: 400; }
+@font-face { font-family: BodyLightFont; src: local('Inter Light'),    local('Inter-Light');    font-weight: 300; }
 
 :root{
     --backgroundColor:#2e2e2e;
@@ -14,6 +19,10 @@ body{
   margin: 0;
   padding: 0;
   background-color: var(--backgroundColor);
+  /* Apply Inter as the global base so anything not explicitly set still looks good */
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hide scroll wheel */
@@ -46,19 +55,20 @@ body{
 }
 
 .name h1{
-  letter-spacing: .45vw;
-  font-family: HeaderFont;
-  font-weight: normal;
+  letter-spacing: .35vw;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   color: var(--headerColor);
   margin: 0;
 }
 
 .name h3{
-  letter-spacing: .4vw;
-  font-size: clamp(11px, 1.2vw, 16px);
-  font-family: SubheaderFont;
-  color: white;
+  letter-spacing: .25vw;
+  font-size: clamp(11px, 1.1vw, 15px);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
   margin: 0;
 }
 

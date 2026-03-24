@@ -19,7 +19,7 @@
 }
 
 .project-title {
-  font-family: HeaderFont;
+  font-family: 'Outfit', sans-serif;
   font-size: 32px;
   color: var(--headerColor);
   margin: 0 0 6px 0;
@@ -27,7 +27,8 @@
 }
 
 .project-meta {
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 14px;
   color: #aaa;
   margin-bottom: 12px;
@@ -52,7 +53,8 @@
 }
 
 .project-summary {
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: var(--textColor);
   line-height: 1.6;
@@ -61,35 +63,204 @@
   /* placeholder space even if empty */
 }
 
-/* ====== MEDIA ====== */
-.media-row {
-  margin-bottom: 16px;
+/* ====== CAROUSEL ====== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #111;
+  user-select: none;
 }
 
-.media-row video,
-.media-row img {
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+.carousel-slide video,
+.carousel-slide img {
+  /* Preserve natural aspect ratio; cap height so portrait media doesn't tower */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 65vh;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.carousel-slide iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Milanote board embed — native 800×500 ratio */
+.milanote-embed {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  border: none;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+/* Four images side-by-side in one slide */
+.carousel-slide--quad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100%;
+}
+
+.carousel-slide--quad img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
-  object-fit: contain;
-  display: block;
+  max-height: 50vh;
+  object-fit: cover;
   border-radius: 4px;
-  background-color: #111;
+  margin: 0;
 }
 
-.media-row iframe {
-  width: 100%;
-  max-height: 60vh;
-  aspect-ratio: 16 / 9;
-  border-radius: 4px;
+/* Prev / Next buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+  z-index: 10;
+  padding: 0;
+  /* hide until hover */
+  opacity: 0;
+}
+
+.carousel:hover .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+/* Dot indicators */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0 8px;
+  background: #111;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
   border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
-/* Side-by-side images/videos */
-.media-duo {
+.carousel-dot.active {
+  background: var(--headerColor, #fff);
+  transform: scale(1.25);
+}
+
+.carousel-dot:hover {
+  background: rgba(255,255,255,0.6);
+}
+
+/* ====== PAGE NAV ====== */
+.site-nav {
+  display: flex;
+  gap: 24px;
+  padding: 10px 7vw;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #aaa;
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--headerColor);
+}
+
+.nav-link.active {
+  color: var(--headerColor);
+  border-bottom-color: var(--headerColor);
+}
+
+/* ====== PERSONAL PROJECTS GRID ====== */
+.projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 40px 32px;
+  margin-top: 40px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .project-title {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.project-card .project-summary {
+  font-size: 14px;
+  margin-bottom: 14px;
+  min-height: 0;
+}
+
+/* In the grid, cap carousel media at a smaller height */
+.project-card .carousel-slide video,
+.project-card .carousel-slide img {
+  max-height: 42vh;
 }
 
 /* ====== ABOUT/CONTACT SECTION ====== */
@@ -115,7 +286,8 @@
 }
 
 .bio {
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 15px;
   color: #ccc;
   line-height: 1.6;
@@ -149,17 +321,15 @@
 }
 
 .education-school {
-  font-family: SubheaderFont;
+  font-family: BodyFont;
   font-size: 13px;
   color: var(--headerColor);
-  letter-spacing: 0.5px;
 }
 
 .education-degree {
   font-family: BodyFont;
   font-size: 12px;
   color: #aaa;
-  letter-spacing: 0.3px;
 }
 
 .contact-icons {
@@ -189,7 +359,8 @@
 }
 
 .resume-link span {
-  font-family: SubheaderFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -234,18 +405,12 @@
     font-size: 14px;
   }
 
-  .media-duo {
-    grid-template-columns: 1fr;
-  }
-
-  .media-row video,
-  .media-row iframe {
-    max-height: 50vh;
-    object-fit: contain;
-  }
-
   .contact-icons {
     gap: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .icon-link svg {

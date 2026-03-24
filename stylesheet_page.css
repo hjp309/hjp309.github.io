@@ -7,7 +7,7 @@ img{
 }
 
 p{
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh;
@@ -19,13 +19,14 @@ ul{
 
 /* Body > Header */
 h1{
-  font-family: HeaderFont;
+  font-family: 'Outfit', sans-serif;
   font-size: 50px;
 }
 
 /* Body > Subheader  */
 h3{
-  font-family: SubheaderFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 30px;
 }
 
@@ -53,7 +54,7 @@ a{
 .bodytext{
   color: white;
   margin-bottom: 150px;
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
 }
 
 .bodytext .aboutmepics {
@@ -135,7 +136,8 @@ video {
 
 .top a{
   text-decoration: none;
-  font-family: SubHeaderFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   color: var(--linkColor);
 }
 
@@ -153,7 +155,8 @@ video {
   height: 50%;
   transform: translate(0%,-50%);
   text-align: center;
-  font-family: SubHeaderFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 
   display: table;
 }
@@ -164,5 +167,6 @@ video {
 }
 
 strike{
-  font-family: SubheaderFont;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }
