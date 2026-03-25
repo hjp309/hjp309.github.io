@@ -54,13 +54,24 @@
 
 .project-summary {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  color: var(--textColor);
-  line-height: 1.6;
+  color: #ccc;
+  line-height: 1.8;
   margin: 0 0 20px 0;
-  min-height: 1.6em;
-  /* placeholder space even if empty */
+  min-height: 1.8em;
+}
+
+/* Paragraph spacing inside multi-p summaries */
+.project-summary p {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.project-summary p + p {
+  margin-top: 0.9em;
 }
 
 /* ====== CAROUSEL ====== */
@@ -241,6 +252,20 @@
   margin-top: 40px;
 }
 
+/* Professional sections inside the grid */
+.projects-grid .project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.projects-grid .project-title {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -287,11 +312,22 @@
 
 .bio {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 15px;
   color: #ccc;
-  line-height: 1.6;
+  line-height: 1.8;
+}
+
+/* Paragraph spacing inside multi-p bio */
+.bio p {
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.bio p + p {
+  margin-top: 0.85em;
 }
 
 /* Education */
@@ -321,13 +357,13 @@
 }
 
 .education-school {
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: var(--headerColor);
 }
 
 .education-degree {
-  font-family: BodyFont;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   color: #aaa;
 }

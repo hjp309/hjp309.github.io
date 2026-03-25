@@ -1,12 +1,12 @@
 /* ====== GOOGLE FONTS ====== */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Font aliases — map old names to new typefaces */
-@font-face { font-family: HeaderFont;    src: local('Outfit Bold'),    local('Outfit-Bold');    font-weight: 700; }
-@font-face { font-family: SubheaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'); font-weight: 600; }
-@font-face { font-family: SubHeaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'); font-weight: 600; }
-@font-face { font-family: BodyFont;      src: local('Inter Regular'),  local('Inter-Regular');  font-weight: 400; }
-@font-face { font-family: BodyLightFont; src: local('Inter Light'),    local('Inter-Light');    font-weight: 300; }
+/* Font aliases — proxy to Google Fonts loaded above */
+@font-face { font-family: HeaderFont;    src: local('Outfit Bold'),    local('Outfit-Bold'),    local('Outfit');   font-weight: 700; }
+@font-face { font-family: SubheaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'), local('Inter'); font-weight: 600; }
+@font-face { font-family: SubHeaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'), local('Inter'); font-weight: 600; }
+@font-face { font-family: BodyFont;      src: local('Inter Regular'),  local('Inter-Regular'),  local('Inter'); font-weight: 400; }
+@font-face { font-family: BodyLightFont; src: local('Inter Light'),    local('Inter-Light'),    local('Inter'); font-weight: 300; }
 
 :root{
     --backgroundColor:#2e2e2e;
