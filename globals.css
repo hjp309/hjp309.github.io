@@ -1,42 +1,33 @@
 /* ====== GOOGLE FONTS ====== */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* Font aliases — proxy to Google Fonts loaded above */
-@font-face { font-family: HeaderFont;    src: local('Outfit Bold'),    local('Outfit-Bold'),    local('Outfit');   font-weight: 700; }
-@font-face { font-family: SubheaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'), local('Inter'); font-weight: 600; }
-@font-face { font-family: SubHeaderFont; src: local('Inter SemiBold'), local('Inter-SemiBold'), local('Inter'); font-weight: 600; }
-@font-face { font-family: BodyFont;      src: local('Inter Regular'),  local('Inter-Regular'),  local('Inter'); font-weight: 400; }
-@font-face { font-family: BodyLightFont; src: local('Inter Light'),    local('Inter-Light'),    local('Inter'); font-weight: 300; }
-
 :root{
-    --backgroundColor:#2e2e2e;
-    --textColor: white;
-    --linkColor: #b7ffb0;
-    --headerColor: #4faaff;
+    --backgroundColor:#ffffff;
+    --textColor: #000000;
+    --linkColor: #000000;
+    --headerColor: #000000;
 }
 
 body{
   margin: 0;
   padding: 0;
   background-color: var(--backgroundColor);
-  /* Apply Inter as the global base so anything not explicitly set still looks good */
+  color: var(--textColor);
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide scroll wheel */
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
 
-/* ====== HEADER ====== */
 .header{
   background-color: var(--backgroundColor);
-  padding: 30px 7vw 20px 7vw;
+  padding: 24px 4vw 8px 4vw;
   margin: 0;
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -47,46 +38,41 @@ body{
   color: var(--textColor);
 }
 
-/* Header > Name */
 .name{
   text-align: left;
-  padding-top: 10px;
-  margin-bottom: 4px;
+  padding-top: 0;
+  margin-bottom: 2px;
 }
 
 .name h1{
-  letter-spacing: .35vw;
-  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: 28px;
   color: var(--headerColor);
   margin: 0;
 }
 
 .name h3{
-  letter-spacing: .25vw;
-  font-size: clamp(11px, 1.1vw, 15px);
+  letter-spacing: 0;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  color: rgba(255,255,255,0.7);
-  margin: 0;
+  color: #666;
+  margin: 2px 0 0 0;
 }
 
 .name .location {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 8px 0 0 0;
-  font-family: BodyFont;
-  font-size: clamp(10px, 1vw, 13px);
-  letter-spacing: 0.2vw;
-  color: #aaa;
-  text-transform: uppercase;
+  margin: 4px 0 0 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #888;
 }
 
 .name .location svg {
-  width: clamp(12px, 1vw, 15px);
-  height: clamp(12px, 1vw, 15px);
-  flex-shrink: 0;
-  opacity: 0.7;
+  width: 14px;
+  height: 14px;
 }
