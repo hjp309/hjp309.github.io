@@ -54,6 +54,31 @@
   margin: 0 0 6px 0;
 }
 
+/* Role + date row */
+.project-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 6px 0;
+}
+
+.project-meta .project-role {
+  margin: 0;
+}
+
+.project-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .project-summary {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
